@@ -21,7 +21,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'hellsburguer' ); ?></a>
 
@@ -36,10 +38,10 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hellsburguer' ); ?></button>
 						<?php
 						wp_nav_menu(
-						array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-						)
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							)
 						);
 						?>
 
@@ -51,9 +53,4 @@
 			</div>
 		</div>
 
-		
-		
-		
-
-		
 	</header><!-- #masthead -->

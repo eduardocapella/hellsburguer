@@ -21,6 +21,6 @@ node_modules/
 *.log
 *.sql
 *.sqlite
-
-# ignore Nodes breguétis
-node_modules
+-
+# ignore Nova (code editor) folder
+.nova/
