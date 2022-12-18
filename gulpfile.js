@@ -5,7 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
 
 function buildStyles() {
-	return gulp.src('./assets/scss/**/*.scss')
+	return gulp.src('./assets/sass/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(sourcemaps.write('./'))
@@ -14,7 +14,7 @@ function buildStyles() {
 
 
 exports.default = function() {
-	gulp.watch('./assets/scss/**/*.scss', { events: 'all' }, function(cb) {
+	gulp.watch('./assets/sass/**/*.scss', { events: 'all' }, function(cb) {
 		buildStyles();
 		cb();
 	});

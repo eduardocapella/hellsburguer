@@ -138,8 +138,11 @@ add_action( 'widgets_init', 'hellsburguer_widgets_init' );
  * Enqueue scripts and styles.
  */
 function hellsburguer_scripts() {
-	wp_enqueue_style( 'hellsburguer-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'hellsburguer-style', 'rtl', 'replace' );
+	// wp_enqueue_style( 'hellsburguer-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	wp_enqueue_style( 'hellsburguer-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
+
+	wp_enqueue_script( 'hellsburguer-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'hellsburguer-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -149,10 +152,6 @@ function hellsburguer_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'hellsburguer_scripts' );
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.
@@ -162,7 +161,7 @@ add_action( 'wp_enqueue_scripts', 'hellsburguer_scripts' );
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-//require get_template_directory() . '/inc/template-functions.php';
+require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
