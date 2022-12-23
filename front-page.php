@@ -17,14 +17,8 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			the_content();
-
-		endwhile; // End of the loop.
-		?>
+      <?php require get_template_directory() . '/inc/fn/exibe_restaurantes.php'; ?>
+      <?php exibe_restaurantes(); ?>
 
 	</main><!-- #main -->
 

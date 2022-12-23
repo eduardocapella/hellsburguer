@@ -1,0 +1,40 @@
+#primary-menu {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	ul {
+		@extend %reseta-lista;
+		display: flex;
+		align-items: center;
+
+		li{
+			 margin-right: 40px;
+
+			 a {
+				  font-size: 0.875rem;
+				  font-weight: 500;
+				  line-height: 1.125rem;
+				  color: $color-neutral-dark;
+			 }
+		}
+	}
+}
+
+
+.menu-mobile {
+	display: none;
+	cursor: pointer;
+}
+
+.bar {
+	display: block;
+	width: 28px;
+	height: 3px;
+	border-radius: 2px;
+	margin: 5px auto;
+	background-color: #000;
+	transition: all 0.3s ease-in-out;
+}

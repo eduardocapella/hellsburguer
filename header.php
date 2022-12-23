@@ -33,27 +33,30 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="row">
-				<div class="col site-branding">
-					<?php the_custom_logo(); ?>
-				</div>
-				<div class="col">
-					<nav id="site-navigation" class="main-navigation">
-						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'hellsburguer' ); ?></button>
-						<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'primary-menu',
-							)
-						);
-						?>
+			<div class="site-branding">
+				<?php the_custom_logo(); ?>
+			</div>
+			<div class="">
+				<nav id="site-navigation" class="main-navigation">
 
-					</nav><!-- #site-navigation -->
-				</div>
-				<div class="col">
-					<a class="btn-franqueado" href="#"><?php echo __( 'Seja um Franqueado', 'hellsburguer' ) ?></a>
-				</div>
+					<div class="menu-mobile">
+						  <span class="bar"></span>
+						  <span class="bar"></span>
+						  <span class="bar"></span>
+					 </div>
+
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+			</div>
+			<div class="">
+				<a class="btn-franqueado" href="#"><?php echo __( 'Seja um Franqueado', 'hellsburguer' ) ?></a>
 			</div>
 		</div>
 

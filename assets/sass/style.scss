@@ -1,9 +1,11 @@
+@use "sass:map";
 
 @import 'abstract/abstract';
-@import 'bootstrap/bootstrap-grid';
+@import 'bootstrap/bootstrap';
 @import 'elements/elements';
 @import 'gutenberg/gutenberg';
-@import 'navigation/navigation';
-@import 'pages/pages';
 @import 'resets/resets';
 @import 'typography/typography';
+@import 'navigation/navigation';
+@import 'pages/pages';
+@import 'sections/sections';
