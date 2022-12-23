@@ -2,19 +2,23 @@
 
 function exibe_restaurantes() {
 
+	// transformar os dados dos campos em variáveis ou objetos PHP
 	$titulo = get_field( 're_titulo' );
 	$restaurantes = get_field( 're_restaurantes' );
 	$background = get_field( 're_background' );
 	$background_image = $background[ 'imagem' ][ 'url' ];
 	$background_image_position = $background[ 'posicionamento_da_imagem' ];
+	$background_opacity = $background[ 'opacidade' ] / 100;
 	// print_r( '<pre>' );
-	// print_r( $background_image_position );
+	// print_r( $background_opacity );
 	// print_r( '</pre>' );
 	?>
 
 	<section class="section_restaurantes" style='background-image: url("<?php echo $background_image; ?>"); background-size: cover; background-repeat: no-repeat; background-size: cover; background-position: <?php echo $background_image_position[ 'label' ]; ?> center;' >
-		<div class="overlay"></div>
+
+		<div class="overlay" style='opacity: <?php echo $background_opacity; ?>'></div>
 		<!-- /.overlay -->
+
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

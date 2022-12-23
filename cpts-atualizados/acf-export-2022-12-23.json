@@ -1,0 +1,227 @@
+[
+    {
+        "key": "group_63a4f5b5ee5a6",
+        "title": "Restaurantes",
+        "fields": [
+            {
+                "key": "field_63a50445c4514",
+                "label": "Título",
+                "name": "re_titulo",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_63a5059137bdd",
+                "label": "Restaurantes",
+                "name": "re_restaurantes",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "table",
+                "pagination": 0,
+                "min": 1,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Adicionar Restaurante",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_63a506a437bde",
+                        "label": "Nome",
+                        "name": "nome",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_63a5059137bdd"
+                    },
+                    {
+                        "key": "field_63a5074337bdf",
+                        "label": "Endereço",
+                        "name": "endereco",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "parent_repeater": "field_63a5059137bdd"
+                    }
+                ]
+            },
+            {
+                "key": "field_63a5077737be0",
+                "label": "Background",
+                "name": "re_background",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_63a507a637be1",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "aria-label": "",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "preview_size": "medium"
+                    },
+                    {
+                        "key": "field_63a5c5e3ea1ec",
+                        "label": "Posicionamento da Imagem",
+                        "name": "posicionamento_da_imagem",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "Topo": "top",
+                            "Centro": "center",
+                            "Base": "bottom"
+                        },
+                        "default_value": "Topo",
+                        "return_format": "array",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "layout": "vertical",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_63a5084c37be2",
+                        "label": "Transparência",
+                        "name": "transparencia",
+                        "aria-label": "",
+                        "type": "radio",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "Preto (padrão)": "Preto (padrão)",
+                            "Sem Transparência": "Sem Transparência"
+                        },
+                        "default_value": "Preto (padrão)",
+                        "return_format": "value",
+                        "allow_null": 0,
+                        "other_choice": 0,
+                        "layout": "vertical",
+                        "save_other_choice": 0
+                    },
+                    {
+                        "key": "field_63a5fbadb410d",
+                        "label": "Opacidade (%)",
+                        "name": "opacidade",
+                        "aria-label": "",
+                        "type": "range",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": 20,
+                        "min": 0,
+                        "max": 100,
+                        "step": 5,
+                        "prepend": "",
+                        "append": "%"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "20"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
