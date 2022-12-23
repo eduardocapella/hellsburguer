@@ -140,7 +140,7 @@ add_action( 'widgets_init', 'hellsburguer_widgets_init' );
 function hellsburguer_scripts() {
 	// wp_enqueue_style( 'hellsburguer-style', get_stylesheet_uri(), array(), _S_VERSION );
 
-	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700;800&display=swap', array(), false );
+	wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400&display=swap', array(), false );
 
 	wp_enqueue_style( 'hellsburguer-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 
@@ -150,6 +150,11 @@ function hellsburguer_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'hellsburguer_scripts' );
+
+function my_custom_admin_css() {
+	wp_enqueue_style( 'style-admin', get_template_directory_uri() . '/style-admin.css', array(), _S_VERSION );
+}
+add_action( 'admin_head', 'my_custom_admin_css' );
 
 
 /**
