@@ -8,15 +8,32 @@ function exibe_restaurantes() {
 	$background = get_field( 're_background' );
 	$background_image = $background[ 'imagem' ][ 'url' ];
 	$background_image_position = $background[ 'posicionamento_da_imagem' ];
-	$background_opacity = $background[ 'opacidade' ] / 100;
-	// print_r( '<pre>' );
-	// print_r( $background_opacity );
-	// print_r( '</pre>' );
+	if( ( $background[ 'transparencia' ] != 'Sem Transparência' ) ) {
+		$background_opacity = $background[ 'opacidade' ] / 100;
+	} else {
+		$background_opacity = null;
+	}
+
+	// função para escrever o parâmetro style apenas se houver transparência
+	function write_opacity( $param ) {
+		if( !empty( $param ) ) {
+			echo 'style="opacity:'. $param .'"';
+		}
+	}
+
+	$background_image_style= 'background-image: url("' . $background_image . '");';
+	$style = array(
+		$background_image_style,
+		'background-size: cover;',
+		'background-repeat: no-repeat;',
+		'background-size: cover;',
+		'background-position:' . $background_image_position[ 'label' ] . ' center;'
+	);
+	$styles = implode( ' ', $style);
 	?>
 
-	<section class="section_restaurantes" style='background-image: url("<?php echo $background_image; ?>"); background-size: cover; background-repeat: no-repeat; background-size: cover; background-position: <?php echo $background_image_position[ 'label' ]; ?> center;' >
-
-		<div class="overlay" style='opacity: <?php echo $background_opacity; ?>'></div>
+	<section class="section_restaurantes" style="<?php echo esc_html($styles); ?>" >
+		<div class="overlay" <?php write_opacity( $background_opacity ); ?>></div>
 		<!-- /.overlay -->
 
 		<div class="container">
