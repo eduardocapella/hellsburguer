@@ -1,19 +1,19 @@
 <?php
 
 function exibe_texto_e_imagem() {
-	$cor_fundo = get_field( 'ti_cor_fundo' );
+	$cor_fundo = get_sub_field( 'ti_cor_fundo' );
 	$cor_fundo_value = $cor_fundo[ 'value' ];
 
-	$titulo = get_field( 'ti_titulo' );
-	$texto = get_field( 'ti_texto' );
-	$imagem = get_field( 'ti_imagem' );
+	$titulo = get_sub_field( 'ti_titulo' );
+	$texto = get_sub_field( 'ti_texto' );
+	$imagem = get_sub_field( 'ti_imagem' );
 
-	if ( !empty( get_field( 'ti_pre_titulo' ) ) ) {
-		$pre_titulo = get_field( 'ti_pre_titulo' );
+	if ( !empty( get_sub_field( 'ti_pre_titulo' ) ) ) {
+		$pre_titulo = get_sub_field( 'ti_pre_titulo' );
 	}
 
 	// print_r( '<pre>' );
-	// print_r( $cor_fundo );
+	// print_r( $imagem );
 	// print_r( '</pre>' );
 
 	?>
