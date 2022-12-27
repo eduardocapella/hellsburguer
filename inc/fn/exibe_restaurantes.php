@@ -1,6 +1,6 @@
 <?php
 
-function exibe_restaurantes() {
+function exibe_restaurantes( $count ) {
 
 	// transformar os dados dos campos em variáveis ou objetos PHP
 	$titulo = get_sub_field( 're_titulo' );
@@ -34,11 +34,11 @@ function exibe_restaurantes() {
 	$styles = implode( ' ', $style);
 	?>
 
-	<section class="section_restaurantes" style="<?php echo esc_html($styles); ?>" >
+	<section id="section-<?php echo $count; ?>" class="section section_restaurantes" style="<?php echo esc_html($styles); ?>" >
 		<div class="overlay" <?php write_opacity( $background_opacity ); ?>></div>
 		<!-- /.overlay -->
 
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-sm-12">
 

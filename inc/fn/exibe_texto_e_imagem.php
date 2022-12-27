@@ -1,6 +1,6 @@
 <?php
 
-function exibe_texto_e_imagem() {
+function exibe_texto_e_imagem( $count ) {
 	$cor_fundo = get_sub_field( 'ti_cor_fundo' );
 	$cor_fundo_value = $cor_fundo[ 'value' ];
 
@@ -18,25 +18,20 @@ function exibe_texto_e_imagem() {
 
 	?>
 
-	<section class="texto_e_imagem">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 imagem">
-					<figure>
-						<img src="<?php echo $imagem[ 'url' ] ?>" alt="<?php echo $imagem[ 'alt' ] ?>">
-					</figure>
-				</div>
-				<!-- /.col-sm-6 -->
-				<div class="col-sm-6 texto <?php echo 'texto-' . $cor_fundo_value ?>">
+	<section id="section-<?php echo $count; ?>" class="section section_texto_e_imagem">
+		<div class="wrapper">
+			<div class="imagem">
+				<figure>
+					<img src="<?php echo $imagem[ 'url' ] ?>" alt="<?php echo $imagem[ 'alt' ] ?>">
+				</figure>
+			</div>
+			<!-- /.imagem -->
+
+			<div class="texto-wrapper <?php echo 'texto-' . $cor_fundo_value ?>">
+				<div class="texto">
 					<?php if( !empty( $pre_titulo ) ) { ?>
 						<h3><?php echo $pre_titulo; ?></h3>
 					<?php } ?>
-
-					<?php
-					// if( !empty( $pre_titulo ) ) {
-					// 	echo '<h3>' . $pre_titulo . '</h3>';
-					// }
-					?>
 
 					<h2><?php echo $titulo; ?></h2>
 					<div class="ti_texto">
@@ -44,9 +39,9 @@ function exibe_texto_e_imagem() {
 					</div>
 					<!-- /.ti_texto -->
 				</div>
-				<!-- /.col-sm-6 -->
+				<!-- /.texto -->
 			</div>
-			<!-- /.row -->
+			<!-- /.texto -->
 		</div>
 		<!-- /.container -->
 	</section>
