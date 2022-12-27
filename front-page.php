@@ -17,8 +17,13 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+      <?php the_content(); ?>
+
       <?php require get_template_directory() . '/inc/fn/exibe_restaurantes.php'; ?>
       <?php exibe_restaurantes(); ?>
+
+      <?php require get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php'  ?>
+      <?php exibe_texto_e_imagem(); ?>
 
 	</main><!-- #main -->
 
