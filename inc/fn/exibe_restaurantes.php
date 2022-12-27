@@ -36,6 +36,8 @@ function exibe_restaurantes() {
 		<div class="overlay" <?php write_opacity( $background_opacity ); ?>></div>
 		<!-- /.overlay -->
 
+
+
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
