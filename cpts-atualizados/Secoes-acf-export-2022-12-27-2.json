@@ -1,0 +1,441 @@
+[
+    {
+        "key": "group_63aa51acc9442",
+        "title": "Seções",
+        "fields": [
+            {
+                "key": "field_63aa51ade3489",
+                "label": "Seções",
+                "name": "secoes",
+                "aria-label": "",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "layout_63aa5785439c5": {
+                        "key": "layout_63aa5785439c5",
+                        "name": "restaurantes",
+                        "label": "Restaurantes",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_63aa5748bd8d6",
+                                "label": "Título",
+                                "name": "re_titulo",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_63aa5748bd8f0",
+                                "label": "Background",
+                                "name": "re_background",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63aa5748c9197",
+                                        "label": "Imagem",
+                                        "name": "imagem",
+                                        "aria-label": "",
+                                        "type": "image",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "return_format": "array",
+                                        "library": "all",
+                                        "min_width": "",
+                                        "min_height": "",
+                                        "min_size": "",
+                                        "max_width": "",
+                                        "max_height": "",
+                                        "max_size": "",
+                                        "mime_types": "",
+                                        "preview_size": "medium"
+                                    },
+                                    {
+                                        "key": "field_63aa5748c91af",
+                                        "label": "Posicionamento da Imagem",
+                                        "name": "posicionamento_da_imagem",
+                                        "aria-label": "",
+                                        "type": "radio",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "Topo": "top",
+                                            "Centro": "center",
+                                            "Base": "bottom"
+                                        },
+                                        "default_value": "Topo",
+                                        "return_format": "array",
+                                        "allow_null": 0,
+                                        "other_choice": 0,
+                                        "layout": "vertical",
+                                        "save_other_choice": 0
+                                    },
+                                    {
+                                        "key": "field_63aa5748c91b6",
+                                        "label": "Transparência",
+                                        "name": "transparencia",
+                                        "aria-label": "",
+                                        "type": "radio",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "choices": {
+                                            "Preto (padrão)": "Preto (padrão)",
+                                            "Sem Transparência": "Sem Transparência"
+                                        },
+                                        "default_value": "Preto (padrão)",
+                                        "return_format": "value",
+                                        "allow_null": 0,
+                                        "other_choice": 0,
+                                        "layout": "vertical",
+                                        "save_other_choice": 0
+                                    },
+                                    {
+                                        "key": "field_63aa5748c91bc",
+                                        "label": "Opacidade (%)",
+                                        "name": "opacidade",
+                                        "aria-label": "",
+                                        "type": "range",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": [
+                                            [
+                                                {
+                                                    "field": "field_63aa5748c91b6",
+                                                    "operator": "!=",
+                                                    "value": "Sem Transparência"
+                                                }
+                                            ]
+                                        ],
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": 20,
+                                        "min": 0,
+                                        "max": 100,
+                                        "step": 5,
+                                        "prepend": "",
+                                        "append": "%"
+                                    }
+                                ]
+                            },
+                            {
+                                "key": "field_63aa5748bd8e5",
+                                "label": "Restaurantes",
+                                "name": "re_restaurantes",
+                                "aria-label": "",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "",
+                                "pagination": 0,
+                                "min": 1,
+                                "max": 0,
+                                "collapsed": "",
+                                "button_label": "Adicionar Restaurante",
+                                "rows_per_page": 20,
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63aa5748c21a8",
+                                        "label": "Nome",
+                                        "name": "nome",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_63aa5748bd8e5"
+                                    },
+                                    {
+                                        "key": "field_63aa5748c21bd",
+                                        "label": "Endereço",
+                                        "name": "endereco",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "parent_repeater": "field_63aa5748bd8e5"
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "layout_63aa57db27a7c": {
+                        "key": "layout_63aa57db27a7c",
+                        "name": "texto_e_imagem",
+                        "label": "Texto e Imagem",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_63aa57eceeb0c",
+                                "label": "Cor de fundo",
+                                "name": "ti_cor_fundo",
+                                "aria-label": "",
+                                "type": "radio",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "vermelho": "Vermelho",
+                                    "branco": "Branco",
+                                    "preto": "Preto"
+                                },
+                                "default_value": "Vermelho",
+                                "return_format": "array",
+                                "allow_null": 0,
+                                "other_choice": 0,
+                                "layout": "vertical",
+                                "save_other_choice": 0
+                            },
+                            {
+                                "key": "field_63aa57eceeb2a",
+                                "label": "Título",
+                                "name": "ti_titulo",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_63aa57eceeb40",
+                                "label": "Pré-título",
+                                "name": "ti_pre_titulo",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_63aa57eceeb4b",
+                                "label": "Texto",
+                                "name": "ti_texto",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            },
+                            {
+                                "key": "field_63aa57eceeb53",
+                                "label": "Imagem",
+                                "name": "ti_imagem",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": "",
+                                "preview_size": "medium"
+                            },
+                            {
+                                "key": "field_63aa57eceeb5a",
+                                "label": "Botão",
+                                "name": "ti_botao",
+                                "aria-label": "",
+                                "type": "group",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "layout": "",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_63aa57ed05610",
+                                        "label": "URL",
+                                        "name": "url",
+                                        "aria-label": "",
+                                        "type": "url",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": ""
+                                    },
+                                    {
+                                        "key": "field_63aa57ed05627",
+                                        "label": "Texto",
+                                        "name": "texto",
+                                        "aria-label": "",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "maxlength": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": ""
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "min": "",
+                "max": "",
+                "button_label": "Adicionar Seção"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]

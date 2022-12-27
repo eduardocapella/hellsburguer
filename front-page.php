@@ -15,15 +15,39 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+      <main id="primary" class="site-main">
 
-      <?php the_content(); ?>
+      <?php
+      the_content();
 
-      <?php require get_template_directory() . '/inc/fn/exibe_restaurantes.php'; ?>
-      <?php exibe_restaurantes(); ?>
+      // Check value exists.
+      if( have_rows( 'secoes' ) ):
+            // Loop through rows.
+            while ( have_rows( 'secoes' ) ) : the_row();
+                  require_once get_template_directory() . '/inc/fn/exibe_restaurantes.php';
+                  require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
 
-      <?php require get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php'  ?>
-      <?php exibe_texto_e_imagem(); ?>
+                  // Case: Restaurantes layout.
+                  if( get_row_layout() == 'restaurantes' ):
+                        exibe_restaurantes();
+                        // Do something...
+
+                  // Case: Download layout.
+                  elseif( get_row_layout() == 'texto_e_imagem' ):
+                        exibe_texto_e_imagem();
+                        // Do something...
+
+                  endif;
+
+          // End loop.
+          endwhile;
+
+      // No value.
+      else :
+          // Do something...
+      endif;
+
+      ?>
 
 	</main><!-- #main -->
 

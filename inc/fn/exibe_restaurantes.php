@@ -3,9 +3,9 @@
 function exibe_restaurantes() {
 
 	// transformar os dados dos campos em variáveis ou objetos PHP
-	$titulo = get_field( 're_titulo' );
-	$restaurantes = get_field( 're_restaurantes' );
-	$background = get_field( 're_background' );
+	$titulo = get_sub_field( 're_titulo' );
+	$restaurantes = get_sub_field( 're_restaurantes' );
+	$background = get_sub_field( 're_background' );
 	$background_image = $background[ 'imagem' ][ 'url' ];
 	$background_image_position = $background[ 'posicionamento_da_imagem' ];
 	if( ( $background[ 'transparencia' ] != 'Sem Transparência' ) ) {
@@ -15,9 +15,11 @@ function exibe_restaurantes() {
 	}
 
 	// função para escrever o parâmetro style apenas se houver transparência
-	function write_opacity( $param ) {
-		if( !empty( $param ) ) {
-			echo 'style="opacity:'. $param .'"';
+	if ( ! function_exists( 'write_opacity' ) ) {
+		function write_opacity( $param ) {
+			if( !empty( $param ) ) {
+				echo 'style="opacity:'. $param .'"';
+			}
 		}
 	}
 
@@ -35,8 +37,6 @@ function exibe_restaurantes() {
 	<section class="section_restaurantes" style="<?php echo esc_html($styles); ?>" >
 		<div class="overlay" <?php write_opacity( $background_opacity ); ?>></div>
 		<!-- /.overlay -->
-
-
 
 		<div class="container">
 			<div class="row">

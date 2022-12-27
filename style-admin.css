@@ -10,3 +10,7 @@
 .postbox-header * {
 	color: white !important;
 }
+
+.post-type-acf-field-group #poststuff .postbox-header h2.hndle {
+	color: white !important;
+}
