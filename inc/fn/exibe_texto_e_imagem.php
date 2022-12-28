@@ -2,13 +2,13 @@
 function analisa_ordem( $param ) {
 	//print_r( $param );
 	if ( $param == 'texto+imagem' ) {
-		echo "ordem-inversa"; 
+		echo "ordem-inversa";
 	}
 }
 
 function exibe_texto_e_imagem( $count ) {
-	$cor_fundo = get_sub_field( 'ti_cor_fundo' );
-	$cor_fundo_value = $cor_fundo[ 'value' ];
+	$cor_de_fundo = get_sub_field( 'ti_cor_fundo' );
+	$cor_de_fundo_value = $cor_de_fundo[ 'value' ];
 
 	$titulo = get_sub_field( 'ti_titulo' );
 	$texto = get_sub_field( 'ti_texto' );
@@ -33,7 +33,7 @@ function exibe_texto_e_imagem( $count ) {
 			</div>
 			<!-- /.imagem -->
 
-			<div class="texto-wrapper <?php echo 'bg-' . $cor_fundo_value ?>">
+			<div class="texto-wrapper <?php echo 'bg-' . $cor_de_fundo_value ?>">
 				<div class="texto">
 					<?php if( !empty( $pre_titulo ) ) { ?>
 						<h3><?php echo $pre_titulo; ?></h3>
@@ -56,6 +56,3 @@ function exibe_texto_e_imagem( $count ) {
 
 
 }
-
-
-
