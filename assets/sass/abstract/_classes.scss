@@ -1,0 +1,29 @@
+
+.bg-preto {
+	background-color: $color-neutral-pure;
+
+	* {
+		color: white;
+	}
+
+	hgroup {
+		p {
+			color: $color-neutral-light;
+		}
+	}
+}
+
+
+.bg-vermelho {
+	background-color: $color-primary-pure;
+
+	* {
+		color: white;
+	}
+
+	hgroup {
+		p {
+			color: $color-neutral-light;
+		}
+	}
+}

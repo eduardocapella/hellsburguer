@@ -29,6 +29,8 @@ get_header();
                   require_once get_template_directory() . '/inc/fn/exibe_restaurantes.php';
                   require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
 
+                  require_once get_template_directory() . '/inc/fn/exibe_grid.php';
+
                   $count++;
 
                   // Case: Restaurantes layout.
@@ -36,9 +38,14 @@ get_header();
                         exibe_restaurantes( $count );
                         // Do something...
 
-                  // Case: Download layout.
+                  // Case: Texto e Imagem layout.
                   elseif( get_row_layout() == 'texto_e_imagem' ):
                         exibe_texto_e_imagem( $count );
+                        // Do something...
+
+                  // Case: Grid layout.
+                  elseif( get_row_layout() == 'grid' ):
+                        exibe_grid( $count );
                         // Do something...
 
                   endif;
