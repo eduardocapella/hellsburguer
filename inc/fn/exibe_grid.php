@@ -6,9 +6,11 @@ function exibe_grid( $count ) {
 	$titulo = get_sub_field( 'gr_titulo' );
 	$subtitulo = get_sub_field( 'gr_subtitulo' );
 	$blocos = get_sub_field( 'gr_bloco' );
+	$cor_de_fundo = get_sub_field( 'cor_de_fundo' );
+	$cor_de_fundo_value = $cor_de_fundo[ 'value' ];
 	?>
 
-	<section class="section" id="x">
+	<section id="section-<?php echo $count; ?>" class="section section_grid <?php echo 'bg-' . $cor_de_fundo_value ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

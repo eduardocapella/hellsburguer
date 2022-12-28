@@ -127,7 +127,15 @@
 			color: $color-neutral-dark;
 		}
 	}
-
-
-
 }
+
+.section_grid {
+	&.bg-preto {
+		h3 {
+			background-color: $color-neutral-dark;
+			padding: 10px;
+			width: fit-content;
+		}
+	}
+}
+
