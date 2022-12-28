@@ -22,6 +22,37 @@ get_header();
 			the_post();
 
 			the_content();
+			     // Check value exists.
+				 if( have_rows( 'secoes' ) ):
+
+					$count = 0;
+					// Loop through rows.
+					while ( have_rows( 'secoes' ) ) : the_row();
+						  require_once get_template_directory() . '/inc/fn/exibe_restaurantes.php';
+						  require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
+		
+						  $count++;
+		
+						  // Case: Restaurantes layout.
+						  if( get_row_layout() == 'restaurantes' ):
+								exibe_restaurantes( $count );
+								// Do something...
+		
+						  // Case: Download layout.
+						  elseif( get_row_layout() == 'texto_e_imagem' ):
+								exibe_texto_e_imagem( $count );
+								// Do something...
+		
+						  endif;
+		
+				  // End loop.
+				  endwhile;
+		
+			  // No value.
+			  else :
+				  // Do something...
+			  endif;
+		
 
 		endwhile; // End of the loop.
 		?>

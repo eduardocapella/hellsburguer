@@ -1,7 +1,6 @@
 @use "sass:map";
-
-@import 'abstract/abstract';
 @import 'bootstrap/bootstrap';
+@import 'abstract/abstract';
 @import 'elements/elements';
 @import 'gutenberg/gutenberg';
 @import 'resets/resets';
