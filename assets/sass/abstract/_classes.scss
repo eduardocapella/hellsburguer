@@ -1,4 +1,3 @@
-
 .bg-preto {
 	background-color: $color-neutral-pure;
 
@@ -13,7 +12,6 @@
 	}
 }
 
-
 .bg-vermelho {
 	background-color: $color-primary-pure;
 
@@ -25,5 +23,24 @@
 		p {
 			color: $color-neutral-light;
 		}
+	}
+}
+
+.ordem-inversa .imagem {
+	@include media-breakpoint-up(sm) {
+  		order: 2;
+	}
+}
+//cor de fundo
+.bg-branco {
+	background: #FFF;
+	color: #1C1C1C;
+	h3 {
+		font-size: 24px;
+		line-height: 24px;
+		color: $color-primary-pure;
+		font-family: $font-body;
+		font-weight: 500;
+		margin-bottom: 0;
 	}
 }
