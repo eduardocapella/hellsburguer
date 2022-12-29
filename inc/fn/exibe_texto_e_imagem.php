@@ -13,7 +13,7 @@ function exibe_texto_e_imagem( $count ) {
 	$titulo = get_sub_field( 'ti_titulo' );
 	$texto = get_sub_field( 'ti_texto' );
 	$imagem = get_sub_field( 'ti_imagem' );
-	$ordem = get_sub_field('ti_ordem_conteudo');
+	$ordem = get_sub_field( 'ti_ordem_conteudo' );
 	if ( !empty( get_sub_field( 'ti_pre_titulo' ) ) ) {
 		$pre_titulo = get_sub_field( 'ti_pre_titulo' );
 	}
