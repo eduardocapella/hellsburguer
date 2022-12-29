@@ -128,6 +128,7 @@
 		}
 	}
 }
+//seção imagem e texto
 
 .section_grid {
 	&.bg-preto {
@@ -137,5 +138,32 @@
 			width: fit-content;
 		}
 	}
+}
+
+//seção cards
+.section_cards{
+	.row > div {
+		max-width: 380px;
+	}
+	.card-container {
+		margin: 0 11px;
+		background-color: $color-primary-extra-light;
+		padding-top: 32px;
+		
+	}
+}
+.section_cards ul h3 {
+	font-size: 1.5rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+	color: $color-primary-pure;
+	font-family: $font-body;
+	margin-bottom: 16px;
+	margin-top: 0;
+}
+.section_cards ul .conteudo {
+	margin-bottom: 32px;
+	padding-left: 23px;
+	padding-right: 23px;
 }
 

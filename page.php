@@ -30,6 +30,8 @@ get_header();
 					while ( have_rows( 'secoes' ) ) : the_row();
 						  require_once get_template_directory() . '/inc/fn/exibe_restaurantes.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
+						  require_once get_template_directory() . '/inc/fn/exibe_grid.php';
+						  require_once get_template_directory() . '/inc/fn/exibe_cards.php';
 		
 						  $count++;
 		
@@ -42,6 +44,16 @@ get_header();
 						  elseif( get_row_layout() == 'texto_e_imagem' ):
 								exibe_texto_e_imagem( $count );
 								// Do something...
+
+						// Case: Download layout.
+						elseif( get_row_layout() == 'grid' ):
+							exibe_grid( $count );
+							// Do something...
+
+							// Case: Download layout.
+						elseif( get_row_layout() == 'cards' ):
+							exibe_cards( $count );
+							// Do something...
 		
 						  endif;
 		
