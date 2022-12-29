@@ -1,11 +1,11 @@
-#primary-menu {
+.menu-principal-container {
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
 
-	ul {
+	#primary-menu {
 		@extend %reseta-lista;
 		display: flex;
 		align-items: center;

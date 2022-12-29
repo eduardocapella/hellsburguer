@@ -4,6 +4,28 @@
 	margin-right: auto;
 	position: relative;
 
+	// levar em conta que as cols têm 20px de margin-top
+	padding-top: 120px;
+	padding-bottom: 140px;
+
+	hgroup {
+		margin-bottom: 60px;
+	}
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	h3 {
+		margin-top: 0;
+		margin-bottom: 8px;
+	}
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+
 	.wrapper {
 		--gap: 0px;
 		max-width: 100%;
