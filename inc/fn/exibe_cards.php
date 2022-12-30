@@ -8,7 +8,7 @@ function exibe_cards( $count ) {
 	$blocos = get_sub_field( 'gr_bloco' );
 	$cor_de_fundo = get_sub_field( 'cor_de_fundo' );
 	$cor_de_fundo_value = $cor_de_fundo[ 'value' ];
-	
+
 		//print_r( '<pre>' );
        	//print_r( $blocos);
         	//print_r( '</pre>' );
@@ -26,7 +26,7 @@ function exibe_cards( $count ) {
 				<!-- /.col-sm-12 -->
 			</div>
 			<!-- /.row -->
-			<ul class="row justify-content-center">
+			<ul class="row justify-content-center cards">
 				<?php
 				foreach( $blocos as $bloco ) {
 					$titulo = get_the_title( $bloco->ID );
@@ -36,7 +36,7 @@ function exibe_cards( $count ) {
 					?>
 					<div class="col-sm-6 col-md-4 gx-0">
 						<div class="card-container">
-							
+
 							<div class="conteudo">
 								<h3><?php echo $titulo; ?></h3>
 								<?php echo $bloco->post_content; ?>
@@ -46,7 +46,7 @@ function exibe_cards( $count ) {
 								<figure>
 									<?php echo $imagem;?>
 								</figure>
-					
+
 							</div>
 						</div>
 					</div>
