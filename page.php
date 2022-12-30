@@ -32,39 +32,39 @@ get_header();
 						  require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_grid.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_cards.php';
-		
+
 						  $count++;
-		
+
 						  // Case: Restaurantes layout.
 						  if( get_row_layout() == 'restaurantes' ):
 								exibe_restaurantes( $count );
 								// Do something...
-		
+
 						  // Case: Download layout.
 						  elseif( get_row_layout() == 'texto_e_imagem' ):
 								exibe_texto_e_imagem( $count );
 								// Do something...
 
-						// Case: Download layout.
-						elseif( get_row_layout() == 'grid' ):
-							exibe_grid( $count );
-							// Do something...
+							// Case: Download layout.
+							elseif( get_row_layout() == 'grid' ):
+								exibe_grid( $count );
+								// Do something...
 
 							// Case: Download layout.
-						elseif( get_row_layout() == 'cards' ):
-							exibe_cards( $count );
-							// Do something...
-		
+							elseif( get_row_layout() == 'cards' ):
+								exibe_cards( $count );
+								// Do something...
+
 						  endif;
-		
+
 				  // End loop.
 				  endwhile;
-		
+
 			  // No value.
 			  else :
 				  // Do something...
 			  endif;
-		
+
 
 		endwhile; // End of the loop.
 		?>

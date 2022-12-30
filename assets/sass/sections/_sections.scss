@@ -32,11 +32,11 @@
 		display: flex;
 		flex-wrap: wrap;
 
-		gap: var( --gap) ;
-		>div {
+		gap: var(--gap);
+		> div {
 			width: 100%;
 			@include media-breakpoint-up(sm) {
-				width: calc( 50% - var( --gap ) );
+				width: calc(50% - var(--gap));
 			}
 		}
 
@@ -58,7 +58,6 @@
 }
 
 .section_restaurantes {
-
 	padding-top: 100px;
 	padding-bottom: 130px;
 	text-align: center;
@@ -79,7 +78,8 @@
 		padding-top: 0;
 	}
 
-	.container, .container-fluid {
+	.container,
+	.container-fluid {
 		z-index: 50;
 		position: relative;
 	}
@@ -105,7 +105,9 @@
 		display: flex;
 	}
 
-	p { margin: 0;}
+	p {
+		margin: 0;
+	}
 
 	ul {
 		@extend %reseta-lista;
@@ -113,10 +115,12 @@
 			margin-bottom: 40px;
 		}
 	}
-
 }
 //Seção imagem e texto
 .section_texto_e_imagem {
+	padding-top: 0;
+	padding-bottom: 0;
+
 	.texto-wrapper {
 		display: flex;
 		justify-content: center;
@@ -126,7 +130,6 @@
 			padding: 80px 0px;
 		}
 
-
 		.texto h2 {
 			font-size: 48px;
 			font-family: $font-headings;
@@ -135,7 +138,7 @@
 			letter-spacing: -2px;
 			margin-top: 16px;
 			margin-bottom: 16px;
-			@include media-breakpoint-down(sm){
+			@include media-breakpoint-down(sm) {
 				font-size: 32px;
 				line-height: 38px;
 				letter-spacing: 0.64px;
@@ -163,7 +166,44 @@
 }
 
 //seção cards
-.section_cards{
+.section_cards {
+	padding-bottom: 0;
+
+	// listra no fundo
+	&.bg-branco {
+		background: linear-gradient(
+				0deg,
+				$color-neutral-pure 0%,
+				$color-neutral-pure 170px,
+				rgba($color-neutral-pure, 0) 170px
+			),
+			$color-primary-extra-light;
+	}
+	&.bg-vermelho {
+		background: linear-gradient(
+				0deg,
+				$color-neutral-pure 0%,
+				$color-neutral-pure 170px,
+				rgba($color-neutral-pure, 0) 170px
+			),
+			$color-primary-pure;
+		.cards {
+			p {
+				color: $color-neutral-pure;
+			}
+		}
+	}
+	&.bg-cinza {
+		background: linear-gradient(
+				0deg,
+				$color-neutral-pure 0%,
+				$color-neutral-pure 170px,
+				rgba($color-neutral-pure, 0) 170px
+			),
+			$color-primary-gray;
+	}
+	// FIM - listra no fundo
+
 	.row > div {
 		max-width: 380px;
 	}
@@ -171,7 +211,12 @@
 		margin: 0 11px;
 		background-color: $color-primary-extra-light;
 		padding-top: 32px;
-
+		overflow: hidden;
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+	}
+	ul.cards {
+		margin-bottom: 0;
 	}
 }
 .section_cards ul h3 {
@@ -189,3 +234,93 @@
 	padding-right: 23px;
 }
 
+.section_cardapio {
+	hgroup {
+		margin-bottom: 100px;
+	}
+}
+
+#cardapio-thumbs {
+	overflow-x: scroll;
+	list-style: none;
+	display: flex;
+	flex-wrap: nowrap;
+	max-width: 100%;
+	gap: 38px;
+
+	.cardapio-thumb {
+		flex: 0 0 auto;
+
+		&.active {
+			figure {
+				background-color: $color-primary-medium;
+			}
+		}
+
+		a {
+			display: block;
+		}
+		figure {
+			width: 100px;
+			height: 100px;
+			border-radius: 4px;
+			background-color: $color-neutral-dark;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		h4 {
+			text-align: center;
+			font-size: 1rem;
+			margin-top: 13px;
+			margin-bottom: 0;
+			font-family: $font-body;
+			font-weight: 500;
+		}
+	}
+}
+
+#cardapio-main {
+	// @extend %reseta-lista;
+	list-style: none;
+
+	li:not(:first-child) {
+		display: none;
+	}
+
+	figure {
+		overflow: hidden;
+		border-radius: 8px;
+
+		@include media-breakpoint-up(sm) {
+			width: fit-content;
+		}
+	}
+
+	.conteudo {
+		* {
+			margin-left: 5px;
+		}
+
+		@include media-breakpoint-up(sm) {
+			max-width: 430px;
+			margin-left: 36px;
+		}
+	}
+
+	h3 {
+		background-color: $color-primary-medium;
+		padding: 5px;
+		width: fit-content;
+		margin-left: 0;
+	}
+
+	h4 {
+		font-family: $font-body;
+		font-size: 1rem;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 8px;
+		margin-bottom: 2rem;
+	}
+}
