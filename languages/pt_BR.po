@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hell's Burguer 2023\n"
+"POT-Creation-Date: 2022-12-29 18:24-0300\n"
+"PO-Revision-Date: 2022-12-29 18:24-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ops! Essa página não pode ser encontrada."
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que nada foi encontrado por aqui. Que tal uma nova pesquisa ou um dos "
+"links abaixo?"
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Categorias mais utilizadas"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Tente pesquisar nos arquivos mensais. %1$s"
+
+#: footer.php:16
+msgid "https://wordpress.org/"
+msgstr "https://br.wordpress.org/"
+
+#. translators: %s: CMS name, i.e. WordPress.
+#: footer.php:19
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Orgulhosamente distribuído por %s"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:25
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr "Tema: %1$s por %2$s."
+
+#: functions.php:52
+msgid "Primary"
+msgstr "Principal"
+
+#: functions.php:125
+msgid "Sidebar"
+msgstr "Barra Lateral"
+
+#: functions.php:127
+msgid "Add widgets here."
+msgstr "Adicione widgets aqui."
+
+#: header.php:32
+msgid "Skip to content"
+msgstr "Pular para o conteúdo"
+
+#: header.php:59
+msgid "Seja um Franqueado"
+msgstr "Seja um Franqueado"
+
+#: inc/cpts/cpt-hamburguers.php:11
+msgctxt "post type general name"
+msgid "Hamburguers"
+msgstr "Hamburguers"
+
+#: inc/cpts/cpt-hamburguers.php:12
+msgctxt "post type singular name"
+msgid "Hamburguer"
+msgstr "Hamburguer"
+
+#: inc/cpts/cpt-hamburguers.php:13 inc/cpts/cpt-molhos.php:13
+msgctxt "Novo item"
+msgid "Add New"
+msgstr "Adicionar Novo"
+
+#: inc/cpts/cpt-hamburguers.php:14 inc/cpts/cpt-hamburguers.php:16
+#: inc/cpts/cpt-molhos.php:14 inc/cpts/cpt-molhos.php:16
+msgid "New Item"
+msgstr "Novo Item"
+
+#: inc/cpts/cpt-hamburguers.php:15 inc/cpts/cpt-molhos.php:15
+msgid "Edit Item"
+msgstr "Editar Item"
+
+#: inc/cpts/cpt-hamburguers.php:17 inc/cpts/cpt-molhos.php:17
+msgid "See Item"
+msgstr "Ver Item"
+
+#: inc/cpts/cpt-hamburguers.php:18 inc/cpts/cpt-molhos.php:18
+msgid "Search Itens"
+msgstr "Procurar Itens"
+
+#: inc/cpts/cpt-hamburguers.php:19 inc/cpts/cpt-molhos.php:19
+msgid "No record found"
+msgstr "Nenhum registro encontrado"
+
+#: inc/cpts/cpt-hamburguers.php:20 inc/cpts/cpt-molhos.php:20
+msgid "Nenhum registro encontrado na lixeira"
+msgstr "Nenhum registro encontrado na lixeira"
+
+#: inc/cpts/cpt-hamburguers.php:22
+msgctxt "menu name"
+msgid "Hamburguers"
+msgstr "Hamburguers"
+
+#: inc/cpts/cpt-molhos.php:11
+msgctxt "post type general name"
+msgid "Sauces"
+msgstr "Molhos"
+
+#: inc/cpts/cpt-molhos.php:12
+msgctxt "post type singular name"
+msgid "Sauce"
+msgstr "Molho"
+
+#: inc/cpts/cpt-molhos.php:22
+msgctxt "menu name"
+msgid "Sauces"
+msgstr "Molhos"
+
+#: single.php:23
+msgid "Previous:"
+msgstr "Anterior:"
+
+#: single.php:24
+msgid "Next:"
+msgstr "Próximo:"
+
+#. Theme Name of the plugin/theme
+msgid "Hell's Burguer 2023"
+msgstr "Hell’s Burguer 2023"
+
+#. Theme URI of the plugin/theme
+msgid "http://underscores.me/"
+msgstr "http://underscores.me/"
+
+#. Description of the plugin/theme
+msgid ""
+"Theme for the Hell\\'s Burguer, hamburger restaurant in Rio de Janeiro, "
+"Brazil."
+msgstr "Tema para o Hell\\'s Burguer, hamburgueria no Rio de Janeiro, Brasil."
+
+#. Author of the plugin/theme
+msgid "Capellaweb"
+msgstr "Capellaweb"
+
+#. Author URI of the plugin/theme
+msgid "https://www.capellaweb.com.br"
+msgstr "https://www.capellaweb.com.br"
