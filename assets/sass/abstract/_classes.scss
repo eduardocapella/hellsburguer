@@ -1,11 +1,15 @@
 .bg-preto {
 	background-color: $color-neutral-pure;
 
-	* { color: white; }
+	* {
+		color: white;
+	}
 
 	hgroup {
 		p {
 			color: $color-neutral-light;
+			flex-shrink: 1;
+			line-height: 1.8rem;
 		}
 	}
 
@@ -20,7 +24,9 @@
 .bg-vermelho {
 	background-color: $color-primary-pure;
 
-	* { color: white; }
+	* {
+		color: white;
+	}
 
 	hgroup {
 		p {
@@ -31,14 +37,16 @@
 
 .ordem-inversa .imagem {
 	@include media-breakpoint-up(sm) {
-  		order: 2;
+		order: 2;
 	}
 }
 //cor de fundo
 .bg-branco {
 	background-color: $color-primary-extra-light;
 
-	* { color: $color-bg-branco-content; }
+	* {
+		color: $color-bg-branco-content;
+	}
 
 	h3 {
 		font-size: 24px;
