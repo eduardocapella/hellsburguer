@@ -10,7 +10,7 @@ function exibe_grid( $count ) {
 	$cor_de_fundo_value = $cor_de_fundo[ 'value' ];
 	?>
 
-	<section id="section-<?php echo $count; ?>" class="section section_grid <?php echo 'bg-' . $cor_de_fundo_value ?>">
+	<section id="section-<?php cria_section_id( $count, $titulo ); ?>" class="section section_grid <?php echo 'bg-' . $cor_de_fundo_value ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

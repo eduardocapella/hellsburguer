@@ -32,6 +32,7 @@ get_header();
                   require_once get_template_directory() . '/inc/fn/exibe_grid.php';
                   require_once get_template_directory() . '/inc/fn/exibe_cards.php';
                   require_once get_template_directory() . '/inc/fn/exibe_cardapio.php';
+                  require_once get_template_directory() . '/inc/fn/exibe_formulario.php';
 
                   $count++;
 
@@ -40,24 +41,29 @@ get_header();
                         exibe_restaurantes( $count );
                         // Do something...
 
-                  // Case: Texto e Imagem layout.
+                  // Case: Texto e Imagem layout
                   elseif( get_row_layout() == 'texto_e_imagem' ):
                         exibe_texto_e_imagem( $count );
                         // Do something...
 
-                  // Case: Grid layout.
+                  // Case: Grid layout
                   elseif( get_row_layout() == 'grid' ):
                         exibe_grid( $count );
                         // Do something...
 
-                  // Case: Download layout.
+                  // Case: Cards layout
                   elseif( get_row_layout() == 'cards' ):
                         exibe_cards( $count );
                         // Do something...
 
-                  // Case: Download layout.
+                  // Case: Cardápio layout
                   elseif( get_row_layout() == 'cardapio' ):
                         exibe_cardapio( $count );
+                        // Do something...
+
+                  // Case: Formulário layout
+                  elseif( get_row_layout() == 'formulario' ):
+                        exibe_formulario( $count );
                         // Do something...
 
                   endif;

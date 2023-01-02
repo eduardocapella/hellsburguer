@@ -1,16 +1,21 @@
 #masthead {
-	height: 110px;
 	padding: 15px;
-	@include media-breakpoint-down(sm){
-	 min-height: 88px;
-	 height: auto;
+	background: white;
+	width: 100%;
+	min-height: 88px;
+	height: auto;
+
+	@include media-breakpoint-up(sm) {
+		position: fixed;
+		z-index: 100;
+		height: $header-height;
 	}
 
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			position: relative;
 			margin-top: 12px;
 			flex-wrap: wrap;
@@ -18,14 +23,13 @@
 	}
 }
 
-
 .custom-logo-link {
 	display: block;
 	img {
 		display: block;
 		height: 80px;
 		width: 100%;
-		@include media-breakpoint-down(sm){
+		@include media-breakpoint-down(sm) {
 			height: 40px;
 			width: auto;
 		}

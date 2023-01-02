@@ -34,7 +34,7 @@ function exibe_restaurantes( $count ) {
 	$styles = implode( ' ', $style);
 	?>
 
-	<section id="section-<?php echo $count; ?>" class="section section_restaurantes" style="<?php echo esc_html($styles); ?>" >
+	<section id="section-<?php cria_section_id( $count, $titulo ); ?>" class="section section_restaurantes" style="<?php echo esc_html($styles); ?>" >
 		<div class="overlay" <?php write_opacity( $background_opacity ); ?>></div>
 		<!-- /.overlay -->
 

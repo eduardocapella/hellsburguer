@@ -24,7 +24,7 @@ function exibe_texto_e_imagem( $count ) {
 
 	?>
 
-	<section id="section-<?php echo $count; ?>" class="section section_texto_e_imagem">
+	<section id="section-<?php cria_section_id( $count, $titulo ); ?>" class="section section_texto_e_imagem">
 		<div class="wrapper <?php analisa_ordem( $ordem ) ?>">
 			<div class="imagem">
 				<figure>
