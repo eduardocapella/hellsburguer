@@ -13,17 +13,29 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hellsburguer' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'hellsburguer' ), 'WordPress' );
+			
+			<?php
+			$rodape = get_field( 'rodape', 'option' );
+			echo '<p>' . $rodape[ 'texto' ] .'</p>';
+
+			$escolha = get_field( 'selecione_as_redes_sociais_do_hells' );
+			//print_r( 'AQUI >>> ' . $escolha );
+
+			if( get_field( 'selecione_as_redes_sociais_do_hells', "option" ) == 'Instagram' )  {
+				$redes_sociais = get_field( 'redes_sociais', "option" );
+				
 				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hellsburguer' ), 'hellsburguer', '<a href="https://www.capellaweb.com.br">Capellaweb</a>' );
-				?>
+				<a href="<?php echo $redes_sociais[ 'instagram_url' ]; ?>"><img src="<?php echo $redes_sociais[ 'instagram_icon' ]['url'] ?>" alt="logo instagram"></a>
+				<?php 
+			}  
+			
+			?>
+
+			
+			
+			
+
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

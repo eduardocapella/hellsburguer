@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	});
 	$('.menu-mobile').on('click',function(){
-		$('.btn-franqueado').show(); // aparece o div
+		$('.btn-franqueado').toggle(); // aparece o div
 		
 	});
 });

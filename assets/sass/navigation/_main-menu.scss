@@ -6,7 +6,7 @@
 	@include media-breakpoint-down(sm){
 		display: none;
 		width: 100%;
-		border-top: 1px solid black;
+		border-top: 1px solid $color-neutral-medium;
 		margin-top: 20px;
 		
 	}
@@ -32,22 +32,27 @@
 			}
 
 			 a {
-				  font-size: 0.875rem;
-				  font-weight: 600;
-				  line-height: 1.125rem;
-				  color: $color-neutral-dark;
-				  font-family: $font-body;
-				  letter-spacing: 0.2px;
+				font-size: 0.875rem;
+				font-weight: 600;
+				line-height: 1.125rem;
+				color: $color-neutral-dark;
+				font-family: $font-body;
+				letter-spacing: 0.2px;
+				padding: 15px 16px;
+				border-radius: 8px;
+				border-radius: 8px;
+				border: 1px solid transparent;
+				transition: all .1s ease-in-out;
+				border: 1px solid transparent;
 				  
 			 }
 			 a:hover{
 				@include media-breakpoint-up(sm) {
 					border: 1px solid $color-primary-medium;
-					padding: 15px 16px;
-					border-radius: 8px;
 					background: $color-primary-medium;
 					color: $color-primary-extra-light;
-					
+					transition: all .1s ease-in-out;
+
 				}
 
 			 }

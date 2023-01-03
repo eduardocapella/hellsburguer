@@ -19,7 +19,7 @@ function exibe_texto_e_imagem( $count ) {
 	}
 
 	// print_r( '<pre>' );
-	// print_r( $ordem );
+	// print_r( $imagem );
 	// print_r( '</pre>' );
 
 	?>
