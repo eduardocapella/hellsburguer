@@ -13,6 +13,8 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
+// impedir que o Contact Form 7 crie tags p automaticamente
+add_filter('wpcf7_autop_or_not', '__return_false');
 
 
 /* CUSTOM POST TYPES */
@@ -23,3 +25,13 @@ require get_template_directory() . '/inc/cpts/cpt-molhos.php';
 // Hamburguers
 require get_template_directory() . '/inc/cpts/cpt-hamburguers.php';
 
+
+
+// Função que cria nomes de id para as seções levando em conta o title e a contagem delas
+function cria_section_id( $count, $titulo='' ) {
+	if( !empty( $titulo) ) {
+		echo sanitize_title( $titulo );
+	} else {
+		echo $count;
+	}
+}

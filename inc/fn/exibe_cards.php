@@ -13,7 +13,7 @@ function exibe_cards( $count ) {
        	//print_r( $blocos);
         	//print_r( '</pre>' );
         ?>
-	<section id="section-<?php echo $count; ?>" class="section section_cards <?php echo 'bg-' . $cor_de_fundo_value ?>">
+	<section id="section-<?php cria_section_id( $count, $titulo ); ?>" class="section section_cards <?php echo 'bg-' . $cor_de_fundo_value ?>">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

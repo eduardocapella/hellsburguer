@@ -11,32 +11,48 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-			<?php
-			$rodape = get_field( 'rodape', 'option' );
-			echo '<p>' . $rodape[ 'texto' ] .'</p>';
 
-			$escolha = get_field( 'selecione_as_redes_sociais_do_hells' );
-			//print_r( 'AQUI >>> ' . $escolha );
+	<footer id="colophon" class="site-footer bg-vermelho">
+		<div class="container">
+			<div class="row justify-content-space-between">
+				<div class="col site-info">
+					<?php
+					$texto = get_field( 'rodape_texto', 'option' );
+					echo $texto;
+					?>
+				</div>
+				<div class="col hells-redes-sociais">
+					<ul class="redes-sociais">
+						<?php
+						$redes_sociais = get_field( 'redes_sociais', 'option' );
 
-			if( get_field( 'selecione_as_redes_sociais_do_hells', "option" ) == 'Instagram' )  {
-				$redes_sociais = get_field( 'redes_sociais', "option" );
-				
-				?>
-				<a href="<?php echo $redes_sociais[ 'instagram_url' ]; ?>"><img src="<?php echo $redes_sociais[ 'instagram_icon' ]['url'] ?>" alt="logo instagram"></a>
-				<?php 
-			}  
-			
-			?>
+						$instagram_url = !empty( $redes_sociais[ 'instagram_url' ] ) ?  $redes_sociais[ 'instagram_url' ] : '';
+						$instagram_icon = !empty( $redes_sociais[ 'instagram_icon' ] ) ?  $redes_sociais[ 'instagram_icon' ] : '';
 
-			
-			
-			
+						$facebook_url = !empty( $redes_sociais[ 'facebook_url' ] ) ?  $redes_sociais[ 'facebook_url' ] : '';
+						$facebook_icon = !empty( $redes_sociais[ 'facebook_icon' ] ) ?  $redes_sociais[ 'facebook_icon' ] : '';
+
+						if ( !empty( $instagram_url ) && !empty( $instagram_icon )  ) {
+							?>
+							<li>
+								<a href="<?php echo $instagram_url; ?>">
+									<figure><img src="<?php echo $instagram_icon[ 'url' ] ?>" alt="<?php echo $instagram_icon[ 'alt' ] ?>"></figure>
+								</a>
+							</li>
+							<?php
+						}
 
 
-		</div><!-- .site-info -->
+
+					?>
+					</ul>
+				</div><!-- .site-info -->
+				<!-- /.col-sm-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
