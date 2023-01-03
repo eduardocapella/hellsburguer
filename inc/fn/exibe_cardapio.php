@@ -1,6 +1,5 @@
 <?php
 
-
 function exibe_cardapio( $count ) {
 
 	if( !empty( get_sub_field( 'gr_titulo' ) ) ) {
@@ -14,12 +13,9 @@ function exibe_cardapio( $count ) {
 	$cor_de_fundo_value = $cor_de_fundo[ 'value' ];
 
 	$hamburgueres = get_sub_field( 'hamburgueres' );
-	// print_r( '<pre>' );
-	// print_r( $hamburgueres );
-	// print_r( '</pre>' );
 	?>
 
-	<section id="section-<?php echo $count; ?>" class="section section_cardapio <?php echo 'bg-' . $cor_de_fundo_value ?>">
+	<section id="section-<?php cria_section_id( $count, $titulo ); ?>" class="section section_cardapio <?php echo 'bg-' . $cor_de_fundo_value ?>">
 		<div class="container">
 			<?php
 			if( !empty( $titulo ) || !empty( $subtitulo ) ) {
