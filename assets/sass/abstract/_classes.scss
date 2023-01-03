@@ -28,6 +28,10 @@
 		color: white;
 	}
 
+	select, input, textarea {
+		color: $color-neutral-pure;
+	}
+
 	hgroup {
 		p {
 			color: $color-neutral-light;

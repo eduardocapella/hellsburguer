@@ -19,7 +19,7 @@ jQuery( document ).ready( function( $ ) {
 	} );
 
 	$( '.menu-mobile' ).on( 'click', function() {
-		$( '.btn-franqueado' ).show(); // aparece o div
+		$( '.btn-franqueado' ).toggle(); // aparece o div
 	} );
 
 	/* FIM - MENU HAMBURGUER */
@@ -40,7 +40,6 @@ jQuery( document ).ready( function( $ ) {
 				menu_ids[ index ][ 1 ] = div.offset().top;
 				menu_ids[ index ][ 2 ] = div.height();
 			} );
-		console.log( 'menu_ids', menu_ids );
 	}
 	get_menu_href_pos();
 
@@ -63,19 +62,55 @@ jQuery( document ).ready( function( $ ) {
 		var scrollTop = $( window ).scrollTop();
 		var screen_height = $( window ).height();
 		var section_avistada = '';
-		console.log( 'scrollTop', scrollTop );
-		// console.log( 'screen_height', screen_height );
 
 		for( i = 0; i < menu_ids.length; i++ ) {
 			if( scrollTop > menu_ids[ i ][ 1 ] - screen_height + 200 ) {
-				// menu_ids[i][0].addClass('active');
 				section_avistada = menu_ids[ i ][ 0 ];
-				console.log( 'section_avistada', section_avistada );
-				// console.log( 'PASSOU!!!', menu_ids[ i ][ 0 ] );
 			}
 		}
 		$( '#primary-menu a' ).removeClass( 'active' );
 		$('a[href=' + section_avistada + ']').addClass('active');
-		console.log('AQUI!', $('a[href=' + section_avistada + ']'));
 	} );
+
+	const swiper = new Swiper('.swiper', {
+
+		slidesPerView: 1,
+		centeredSlides: true,
+		spaceBetween: 27,
+		watchSlidesProgress: true,
+
+		// Optional parameters
+		direction: 'horizontal',
+		loop: false,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		breakpoints: {
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 27,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 27,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 27,
+			},
+		},
+
+	});
+
+
 } );
