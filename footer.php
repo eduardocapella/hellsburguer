@@ -11,20 +11,47 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'hellsburguer' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'hellsburguer' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'hellsburguer' ), 'hellsburguer', '<a href="https://www.capellaweb.com.br">Capellaweb</a>' );
-				?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer bg-vermelho">
+		<div class="container">
+			<div class="row justify-content-space-between">
+				<div class="col site-info">
+					<?php
+					$texto = get_field( 'rodape_texto', 'option' );
+					echo $texto;
+					?>
+				</div>
+				<div class="col hells-redes-sociais">
+					<ul class="redes-sociais">
+						<?php
+						$redes_sociais = get_field( 'redes_sociais', 'option' );
+
+						$instagram_url = !empty( $redes_sociais[ 'instagram_url' ] ) ?  $redes_sociais[ 'instagram_url' ] : '';
+						$instagram_icon = !empty( $redes_sociais[ 'instagram_icon' ] ) ?  $redes_sociais[ 'instagram_icon' ] : '';
+
+						$facebook_url = !empty( $redes_sociais[ 'facebook_url' ] ) ?  $redes_sociais[ 'facebook_url' ] : '';
+						$facebook_icon = !empty( $redes_sociais[ 'facebook_icon' ] ) ?  $redes_sociais[ 'facebook_icon' ] : '';
+
+						if ( !empty( $instagram_url ) && !empty( $instagram_icon )  ) {
+							?>
+							<li>
+								<a href="<?php echo $instagram_url; ?>">
+									<figure><img src="<?php echo $instagram_icon[ 'url' ] ?>" alt="<?php echo $instagram_icon[ 'alt' ] ?>"></figure>
+								</a>
+							</li>
+							<?php
+						}
+
+
+
+					?>
+					</ul>
+				</div><!-- .site-info -->
+				<!-- /.col-sm-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
