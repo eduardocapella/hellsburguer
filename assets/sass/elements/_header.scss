@@ -28,7 +28,7 @@
 	img {
 		display: block;
 		height: 80px;
-		width: 100%;
+		width: auto;
 		@include media-breakpoint-down(sm) {
 			height: 40px;
 			width: auto;

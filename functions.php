@@ -144,7 +144,12 @@ function hellsburguer_scripts() {
 
 	wp_enqueue_style( 'hellsburguer-style', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION );
 
+	wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array( 'jquery' ), _S_VERSION, true );
+
 	wp_enqueue_script( 'hellsburguer-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), _S_VERSION, true );
+
+
+
 
 	// wp_enqueue_script( 'hellsburguer-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 

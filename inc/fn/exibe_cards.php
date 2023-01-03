@@ -26,37 +26,41 @@ function exibe_cards( $count ) {
 				<!-- /.col-sm-12 -->
 			</div>
 			<!-- /.row -->
-			<ul class="row justify-content-center cards">
-				<?php
-				foreach( $blocos as $bloco ) {
-					$titulo = get_the_title( $bloco->ID );
-					$imagem = get_the_post_thumbnail( $bloco->ID );
-					$conteudo = get_the_content( $bloco->ID );
 
-					?>
-					<div class="col-sm-6 col-md-4 gx-0">
-						<div class="card-container">
+			<div class="swiper">
+				<div class="swiper-wrapper cards">
+					<?php
+					foreach( $blocos as $bloco ) {
+						$titulo = get_the_title( $bloco->ID );
+						$imagem = get_the_post_thumbnail( $bloco->ID );
+						$conteudo = get_the_content( $bloco->ID );
 
-							<div class="conteudo">
-								<h3><?php echo $titulo; ?></h3>
-								<?php echo $bloco->post_content; ?>
-							</div>
-							<!-- /.conteudo -->
-							<div class="imagem">
-								<figure>
-									<?php echo $imagem;?>
-								</figure>
+						?>
+						<div class="swiper-slide">
+							<div class="card-container">
 
+								<div class="conteudo">
+									<h3><?php echo $titulo; ?></h3>
+									<?php echo $bloco->post_content; ?>
+								</div>
+								<!-- /.conteudo -->
+								<div class="imagem">
+									<figure>
+										<?php echo $imagem;?>
+									</figure>
+
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- /.col-sm-4 -->
-					<?php
-
-				}
-				?>
-			</ul>
-			<!-- /.row -->
+						<!-- /.col-sm-4 -->
+						<?php
+					}
+					?>
+				</div>
+				<!-- /.row -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- /.swiper -->
 		</div>
 		<!-- /.container -->
 	</section>
