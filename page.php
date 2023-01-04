@@ -23,6 +23,7 @@ get_header();
 
 			the_content();
 			     // Check value exists.
+				
 				 if( have_rows( 'secoes' ) ):
 
 					$count = 0;

@@ -35,8 +35,12 @@ textarea {
 
 select {
 	display: block;
-	max-height: 38px;
 	border-radius: $border-radius;
+
+	height: 38px;
+	width: 100%;
+	padding: 10px;
+	font-size: .9rem;
 
 	-webkit-appearance: none;
 }
