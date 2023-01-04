@@ -6,7 +6,7 @@
 	@include media-breakpoint-down(sm) {
 		display: none;
 		width: 100%;
-		border-top: 1px solid black;
+		border-top: 1px solid $color-neutral-medium;
 		margin-top: 20px;
 	}
 
@@ -27,11 +27,15 @@
 				padding: 19px 0;
 			}
 
+
 			a {
+
+				
 				font-size: 0.875rem;
 				font-weight: 600;
 				line-height: 1.125rem;
 				color: $color-neutral-dark;
+
 				letter-spacing: 0.2px;
 				border-color: 1px solid transparent;
 				display: block;
@@ -41,11 +45,19 @@
 			}
 			a:hover, a.active  {
 				@include media-breakpoint-up(sm) {
-					border-color: $color-primary-medium;
-					background: $color-primary-medium;
-					color: $color-primary-extra-light;
+					border-color: $color-primary-light;
+					background: $color-primary-light;
+					color: $color-primary-medium;
 					transition: all 0.2s ease-in-out;
+
 				}
+			}
+			a:focus {
+				border-color: $color-primary-medium;
+				background: $color-primary-medium;
+				color: $color-primary-extra-light;
+				transition: all 0.2s ease-in-out;
+
 			}
 		}
 	}

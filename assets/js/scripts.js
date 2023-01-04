@@ -8,19 +8,24 @@ jQuery( document ).ready( function( $ ) {
 		$( '#cardapio-main li' ).hide();
 		$( '#cardapio-main .' + classe ).css( 'display', 'flex' );
 	} );
+	
 
 	/* MENU HAMBURGUER */
 	let menuMobile = document.querySelector( '.menu-mobile' );
 	let mainNavigation = document.querySelector( '.main-navigation' );
+	
 
 	menuMobile.addEventListener( 'click', () => {
 		menuMobile.classList.toggle( 'active' );
 		mainNavigation.classList.toggle( 'active' );
 	} );
 
+
+
 	$( '.menu-mobile' ).on( 'click', function() {
 		$( '.btn-franqueado' ).toggle(); // aparece o div
 	} );
+
 
 	/* FIM - MENU HAMBURGUER */
 
