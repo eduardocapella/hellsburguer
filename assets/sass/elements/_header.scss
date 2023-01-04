@@ -1,12 +1,14 @@
 #masthead {
-	padding: 15px;
 	background: white;
 	width: 100%;
 	min-height: 88px;
 	height: auto;
 
+	padding-left: 0;
+	padding-right: 0;
 
 	@include media-breakpoint-up(sm) {
+		padding: 15px;
 		position: fixed;
 		z-index: 100;
 		height: $header-height;
@@ -16,20 +18,40 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 		@include media-breakpoint-down(sm) {
 			position: relative;
-			margin-top: 12px;
 			flex-wrap: wrap;
+			padding-left: 0;
+			padding-right: 0;
+			min-height: 88px;
+			margin-top: 0;
 		}
 	}
 }
 
-.custom-logo-link { 
+.site-branding {
+	margin-left: 40px;
+
+	@include media-breakpoint-up(down) {
+		height: 88px;
+		display: flex;
+		align-items: center;
+	}
+
+	@include media-breakpoint-up(sm) {
+		margin-left: 0;
+	}
+}
+
+.custom-logo-link {
 	display: block;
+
 	img {
 		display: block;
 		height: 80px;
 		width: auto;
+
 		@include media-breakpoint-down(sm) {
 			height: 40px;
 			width: auto;

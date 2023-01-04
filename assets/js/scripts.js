@@ -8,18 +8,16 @@ jQuery( document ).ready( function( $ ) {
 		$( '#cardapio-main li' ).hide();
 		$( '#cardapio-main .' + classe ).css( 'display', 'flex' );
 	} );
-	
+
 
 	/* MENU HAMBURGUER */
 	let menuMobile = document.querySelector( '.menu-mobile' );
 	let mainNavigation = document.querySelector( '.main-navigation' );
-	
 
 	menuMobile.addEventListener( 'click', () => {
 		menuMobile.classList.toggle( 'active' );
 		mainNavigation.classList.toggle( 'active' );
 	} );
-
 
 
 	$( '.menu-mobile' ).on( 'click', function() {
@@ -43,7 +41,6 @@ jQuery( document ).ready( function( $ ) {
 				menu_ids[ index ] = [];
 				menu_ids[ index ][ 0 ] = href;
 				menu_ids[ index ][ 1 ] = div.offset().top;
-				// menu_ids[ index ][ 2 ] = div.height();
 			} );
 	}
 	get_menu_href_pos();
@@ -74,10 +71,10 @@ jQuery( document ).ready( function( $ ) {
 			}
 		}
 		$( '#primary-menu a' ).removeClass( 'active' );
-		$('a[href=' + section_avistada + ']').addClass('active');
+		$( 'a[href=' + section_avistada + ']' ).addClass( 'active' );
 	} );
 
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper( '.swiper', {
 
 		slidesPerView: 1,
 		// centeredSlides: true,
@@ -115,7 +112,7 @@ jQuery( document ).ready( function( $ ) {
 			},
 		},
 
-	});
+	} );
 
 
 } );

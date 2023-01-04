@@ -36,7 +36,7 @@
 			<div class="site-branding">
 				<?php the_custom_logo(); ?>
 			</div>
-			<div class="">
+
 				<nav id="site-navigation" class="main-navigation">
 
 					<div class="menu-mobile">
@@ -54,10 +54,11 @@
 					);
 					?>
 				</nav><!-- #site-navigation -->
-			</div>
-			<div class="">
+
+
 				<a class="btn-franqueado" href="#"><?php echo __( 'Seja um Franqueado', 'hellsburguer' ) ?></a>
-			</div>
+
 		</div>
 
 	</header><!-- #masthead -->
+
