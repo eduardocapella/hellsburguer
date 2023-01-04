@@ -43,6 +43,12 @@ select {
 	font-size: .9rem;
 
 	-webkit-appearance: none;
+	position: relative;
+
+	background-image: url('../images/hells-burguer-arrow-select.svg');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 8px) calc(100% - 14px);
+	background-size: 10px 6px;
 }
 
 textarea {

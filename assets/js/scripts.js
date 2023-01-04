@@ -38,7 +38,7 @@ jQuery( document ).ready( function( $ ) {
 				menu_ids[ index ] = [];
 				menu_ids[ index ][ 0 ] = href;
 				menu_ids[ index ][ 1 ] = div.offset().top;
-				menu_ids[ index ][ 2 ] = div.height();
+				// menu_ids[ index ][ 2 ] = div.height();
 			} );
 	}
 	get_menu_href_pos();
@@ -75,7 +75,7 @@ jQuery( document ).ready( function( $ ) {
 	const swiper = new Swiper('.swiper', {
 
 		slidesPerView: 1,
-		centeredSlides: true,
+		// centeredSlides: true,
 		spaceBetween: 27,
 		watchSlidesProgress: true,
 
