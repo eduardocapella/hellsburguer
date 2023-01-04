@@ -1,0 +1,33 @@
+.site-footer {
+     border-top: 1px solid crimson;
+      > .container {
+          @include media-breakpoint-down(sm) {
+               position: relative;
+          }
+     }
+     .site-info {
+
+          align-items: center;
+          display: flex;
+          font-size: 14px;
+          font-family: $font-body;
+          font-weight: 500;
+          line-height: 18px;
+          letter-spacing: 2px;
+          @include media-breakpoint-down(sm) {
+               padding-left: 20px;
+               position: absolute;
+               top: 50px;
+               left: 0;
+          }
+     }
+}    .redes-sociais {
+     
+          display: flex;
+          justify-content: end;
+          list-style: none;
+          padding-top: 22px;
+          @include media-breakpoint-down(sm) {
+               padding-right: 10px;
+          }
+     }

@@ -11,6 +11,7 @@
 
 ?>
 
+
 	<footer id="colophon" class="site-footer bg-vermelho">
 		<div class="container">
 			<div class="row justify-content-space-between">

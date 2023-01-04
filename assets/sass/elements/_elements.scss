@@ -2,6 +2,7 @@
 @import 'forms';
 @import 'lists';
 @import 'header';
+@import 'footer';
 
 a {
 	text-decoration: none;
@@ -27,7 +28,8 @@ hgroup {
 	h3,
 	h4,
 	h5,
-	h6 {
+	h6 
+	{
 		margin-right: 1.5rem;
 	}
 

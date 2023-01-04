@@ -5,6 +5,7 @@
 	min-height: 88px;
 	height: auto;
 
+
 	@include media-breakpoint-up(sm) {
 		position: fixed;
 		z-index: 100;
@@ -23,7 +24,7 @@
 	}
 }
 
-.custom-logo-link {
+.custom-logo-link { 
 	display: block;
 	img {
 		display: block;
