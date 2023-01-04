@@ -3,17 +3,24 @@
 	align-items: center;
 	justify-content: space-between;
 	width: 100%;
+
 	@include media-breakpoint-down(sm) {
 		display: none;
 		width: 100%;
-		border-top: 1px solid $color-neutral-medium;
-		margin-top: 20px;
+		// margin-top: 20px;
+		// margin-left: 40px;
+		// margin-right: 40px;
+
+		border-top: 1px solid $color-menu-border;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 
 	#primary-menu {
 		@extend %reseta-lista;
 		display: flex;
 		align-items: center;
+
 		@include media-breakpoint-down(sm) {
 			flex-wrap: wrap;
 			display: flex;
@@ -22,15 +29,12 @@
 
 		li {
 			margin-right: 40px;
+
 			@include media-breakpoint-down(sm) {
 				width: 100%;
-				padding: 19px 0;
 			}
 
-
 			a {
-
-				
 				font-size: 0.875rem;
 				font-weight: 600;
 				line-height: 1.125rem;
@@ -39,43 +43,63 @@
 				letter-spacing: 0.2px;
 				border-color: 1px solid transparent;
 				display: block;
-				padding: 15px 16px;
+				padding: 18px 0;
 				border-radius: 8px;
 				transition: all 0.2s ease-in-out;
-			}
-			a:hover, a.active  {
-				@include media-breakpoint-up(sm) {
-					border-color: $color-primary-light;
-					background: $color-primary-light;
-					color: $color-primary-medium;
-					transition: all 0.2s ease-in-out;
 
+				@include media-breakpoint-up(sm) {
+					padding: 18px 16px;
+				}
+
+				&:hover {
+					@include media-breakpoint-up(sm) {
+						border-color: $color-primary-light;
+						background: $color-primary-light;
+						color: $color-primary-medium;
+						transition: all 0.2s ease-in-out;
+					}
 				}
 			}
+
+			.active {
+				color: $color-primary-extra-light;
+				background-color: $color-primary-medium;
+				transition: all 0.2s ease-in-out;
+				pointer-events: none;
+			}
+
 			a:focus {
 				border-color: $color-primary-medium;
 				background: $color-primary-medium;
 				color: $color-primary-extra-light;
 				transition: all 0.2s ease-in-out;
-
 			}
 		}
 	}
 }
+
 .menu-mobile {
 	display: none;
 	cursor: pointer;
+
 	@include media-breakpoint-down(sm) {
 		display: block;
 		position: absolute;
-		right: 15px;
-		top: 5px;
+		right: 40px;
+		top: 30px;
 	}
 }
+
 .main-navigation.active {
 	.menu-principal-container {
 		display: flex;
 	}
+}
+
+#site-navigation {
+	// border-top: 1px solid $color-menu-border;
+	// padding-left: 40px;
+	// padding-right: 40px;
 }
 
 .bar {

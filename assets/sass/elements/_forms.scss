@@ -29,6 +29,7 @@ textarea {
 		border-color: $color-neutral-pure;
 		transition: all .2s ease-in-out;
 	}
+
 	outline: none;
 	-webkit-appearance: none;
 }
@@ -43,6 +44,12 @@ select {
 	font-size: .9rem;
 
 	-webkit-appearance: none;
+	position: relative;
+
+	background-image: url('../images/hells-burguer-arrow-select.svg');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 8px) calc(100% - 14px);
+	background-size: 10px 6px;
 }
 
 textarea {
