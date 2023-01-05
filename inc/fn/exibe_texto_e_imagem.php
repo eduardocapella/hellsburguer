@@ -18,6 +18,10 @@ function exibe_texto_e_imagem( $count ) {
 		$pre_titulo = get_sub_field( 'ti_pre_titulo' );
 	}
 
+	if( get_sub_field( 'ti_deseja_inserir_botao' ) == 'Sim' ) {
+		$botao = get_sub_field( 'ti_botao' );
+	}
+
 	// print_r( '<pre>' );
 	// print_r( $imagem );
 	// print_r( '</pre>' );
@@ -44,6 +48,13 @@ function exibe_texto_e_imagem( $count ) {
 						<?php echo $texto; ?>
 					</div>
 					<!-- /.ti_texto -->
+
+					<?php
+					if( isset( $botao ) ) {
+						escreve_botao( $botao );
+					}
+					?>
+
 				</div>
 				<!-- /.texto -->
 			</div>

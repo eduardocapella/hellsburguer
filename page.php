@@ -23,7 +23,7 @@ get_header();
 
 			the_content();
 			     // Check value exists.
-				
+
 				 if( have_rows( 'secoes' ) ):
 
 					$count = 0;
@@ -31,36 +31,49 @@ get_header();
 					while ( have_rows( 'secoes' ) ) : the_row();
 						  require_once get_template_directory() . '/inc/fn/exibe_restaurantes.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_texto_e_imagem.php';
+
 						  require_once get_template_directory() . '/inc/fn/exibe_grid.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_cards.php';
 						  require_once get_template_directory() . '/inc/fn/exibe_cardapio.php';
+						  require_once get_template_directory() . '/inc/fn/exibe_formulario.php';
+						  require_once get_template_directory() . '/inc/fn/exibe_banner_principal.php';
 
 						  $count++;
 
 						  // Case: Restaurantes layout.
 						  if( get_row_layout() == 'restaurantes' ):
-								exibe_restaurantes( $count );
-								// Do something...
+								  exibe_restaurantes( $count );
+								  // Do something...
 
-						  // Case: Texto e imagem.
+						  // Case: Texto e Imagem layout
 						  elseif( get_row_layout() == 'texto_e_imagem' ):
-								exibe_texto_e_imagem( $count );
-								// Do something...
+								  exibe_texto_e_imagem( $count );
+								  // Do something...
 
-							// Case: Grid.
-							elseif( get_row_layout() == 'grid' ):
-								exibe_grid( $count );
-								// Do something...
+						  // Case: Grid layout
+						  elseif( get_row_layout() == 'grid' ):
+								  exibe_grid( $count );
+								  // Do something...
 
-							// Case: Cards.
-							elseif( get_row_layout() == 'cards' ):
-								exibe_cards( $count );
-								// Do something...
+						  // Case: Cards layout
+						  elseif( get_row_layout() == 'cards' ):
+								  exibe_cards( $count );
+								  // Do something...
 
-								// Case: Cardapio.
-							elseif( get_row_layout() == 'cardapio' ):
-								exibe_cardapio( $count );
-								// Do something...
+						  // Case: Cardápio layout
+						  elseif( get_row_layout() == 'cardapio' ):
+								  exibe_cardapio( $count );
+								  // Do something...
+
+						  // Case: Formulário layout
+						  elseif( get_row_layout() == 'formulario' ):
+								  exibe_formulario( $count );
+								  // Do something...
+
+						  // Case: Formulário layout
+						  elseif( get_row_layout() == 'banner_principal' ):
+								  exibe_banner_principal( $count );
+								  // Do something...
 
 						  endif;
 

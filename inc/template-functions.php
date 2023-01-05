@@ -35,3 +35,13 @@ function cria_section_id( $count, $titulo='' ) {
 		echo $count;
 	}
 }
+
+function escreve_botao( $botao ) {
+	?>
+	<div class="is-layout-flex wp-block-buttons">
+		<div class="wp-block-button">
+			<a href="<?php echo $botao[ 'texto' ]; ?>" class="wp-block-button__link wp-element-button"><?php echo $botao[ 'texto' ]; ?></a>
+		</div>
+	</div>
+	<?php
+}

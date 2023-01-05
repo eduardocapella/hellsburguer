@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * The template for displaying the fron-page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Hell\'s_Burguer_2023
+ * @package Hell's_Burguer_2023
  */
 
 get_header();
@@ -33,6 +33,7 @@ get_header();
                   require_once get_template_directory() . '/inc/fn/exibe_cards.php';
                   require_once get_template_directory() . '/inc/fn/exibe_cardapio.php';
                   require_once get_template_directory() . '/inc/fn/exibe_formulario.php';
+                  require_once get_template_directory() . '/inc/fn/exibe_banner_principal.php';
 
                   $count++;
 
@@ -64,6 +65,11 @@ get_header();
                   // Case: Formulário layout
                   elseif( get_row_layout() == 'formulario' ):
                         exibe_formulario( $count );
+                        // Do something...
+
+                  // Case: Formulário layout
+                  elseif( get_row_layout() == 'banner_principal' ):
+                        exibe_banner_principal( $count );
                         // Do something...
 
                   endif;
