@@ -15,13 +15,15 @@
 	<footer id="colophon" class="site-footer bg-vermelho">
 		<div class="container">
 			<div class="row justify-content-space-between">
-				<div class="col site-info">
-					<?php
-					$texto = get_field( 'rodape_texto', 'option' );
-					echo $texto;
-					?>
+				<div class="col-8 col-sm-6 site-info">
+					<p>
+						<?php
+						$texto = get_field( 'rodape_texto', 'option' );
+						echo $texto;
+						?>
+					</p>
 				</div>
-				<div class="col hells-redes-sociais">
+				<div class="col-4 col-sm-6 hells-redes-sociais">
 					<ul class="redes-sociais">
 						<?php
 						$redes_sociais = get_field( 'redes_sociais', 'option' );
