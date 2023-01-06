@@ -18,12 +18,7 @@
       line-height: 18px;
       letter-spacing: 2px;
 
-      @include media-breakpoint-down(sm) {
-         padding-left: 20px;
-         position: absolute;
-         top: 50px;
-         left: 0;
-      }
+      @include media-breakpoint-down(sm) {}
    }
 
    .row {
